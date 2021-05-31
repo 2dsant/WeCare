@@ -1,0 +1,40 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.toolbar {
+    height: 8vh;
+    background: rgb(61, 118, 61);
+    color: white;
+}
+
+.container-sidenav {
+    height: 90vh;
+}
+
+.sidenav {
+    width: 25vh;
+    background: rgb(61, 118, 61);
+    color: white;
+}
+
+.logo {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.logo img{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+.toolbar-profile{
+    display: inline-block;
+    margin-top: 10px;
+
+}
+.toolbar-profile-img {
+    height: 48px;
+    width: auto;
+    border-radius: 50%;
+}

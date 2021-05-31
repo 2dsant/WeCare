@@ -1,0 +1,46 @@
+<mat-toolbar class="toolbar">
+    <span class="logo">
+        <img src="assets/img/charity.png" [routerLink]="['/home']">
+    </span>
+
+    <button (click)="drawer.toggle()" mat-icon-button class="example-icon"
+        aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <button mat-button class="toolbar-buttons">Home</button>
+    <button mat-button class="toolbar-buttons">Projetos</button>
+    <button mat-button class="toolbar-buttons">Forum</button>
+    <!-- <span>My App</span> -->
+    <span class="example-spacer"></span>
+
+    <button mat-icon-button class="example-icon favorite-icon" [routerLink]="['/projeto']">
+        <mat-icon>favorite</mat-icon>
+    </button>
+
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+    </button>
+
+    <span class="toolbar-profile">
+        <img class="toolbar-profile-img" src="assets/img/profile.jpg" [routerLink]="['/home']">
+    </span>
+</mat-toolbar>
+
+<mat-drawer-container class="container-sidenav">
+
+    <mat-drawer #drawer class="sidenav" mode="push">
+        <p>Teste</p>
+        <p>Teste</p>
+        <p>Teste</p>
+        <p>Teste</p>
+        <p>Teste</p>
+        <p>Teste</p>
+        <p>Teste</p>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        <router-outlet></router-outlet>
+    </div>
+
+</mat-drawer-container>
