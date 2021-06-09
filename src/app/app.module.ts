@@ -12,6 +12,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { ListaProjetosComponent } from './view/projeto/lista-projetos/lista-projetos.component';
+import { FormularioUserComponent } from './view/user/formulario-user/formulario-user.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +23,8 @@ import { ListaProjetosComponent } from './view/projeto/lista-projetos/lista-proj
     HomeComponent,
     NavbarComponent,
     ScreenComponent,
-    ListaProjetosComponent
+    ListaProjetosComponent,
+    FormularioUserComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,9 @@ import { ListaProjetosComponent } from './view/projeto/lista-projetos/lista-proj
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    ReactiveFormsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

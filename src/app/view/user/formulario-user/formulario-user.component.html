@@ -1,0 +1,30 @@
+<form [formGroup]="formUser">
+    <mat-form-field class="example-full-width">
+        <mat-label>Nome</mat-label>
+        <input type="text" matInput placeholder="Ex. João" name="str_nome" formControlName="str_nome">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Celular</mat-label>
+        <input name="str_celular" matInput id="str_celular" formControlName="str_celular">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input type="eamil" matInput name="str_email" id="str_email" formControlName="str_email">
+    </mat-form-field>
+    <!-- <mat-form-field class="example-full-width">
+        <mat-label>Genero</mat-label>
+        <input name="str_genero" id="str_genero" formControlName="str_genero">
+    </mat-form-field> -->
+    <input name="str_cgc" id="str_cgc" formControlName="str_cgc" mask="000.000.000-00">
+    <input name="str_tipo" id="str_tipo" formControlName="str_tipo">
+    <input name="dat_nasc" id="dat_nasc" formControlName="dat_nasc" mask="00/00/0000">
+
+    <div formGroupName="endereco">
+        <input name="str_cep" id="str_cep" formControlName="str_cep">
+        <input name="str_logradouro" id="str_logradouro" formControlName="str_logradouro">
+        <input name="str_bairro" id="str_bairro" formControlName="str_bairro">
+        <input name="str_numero" id="str_numero" formControlName="str_numero">
+        <input name="str_cidade" id="str_cidade" formControlName="str_cidade">
+        <input name="str_estado" id="str_estado" formControlName="str_estado">
+    </div>
+</form>
