@@ -1,30 +1,84 @@
-<form [formGroup]="formUser">
-    <mat-form-field class="example-full-width">
-        <mat-label>Nome</mat-label>
-        <input type="text" matInput placeholder="Ex. João" name="str_nome" formControlName="str_nome">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-        <mat-label>Celular</mat-label>
-        <input name="str_celular" matInput id="str_celular" formControlName="str_celular">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-        <mat-label>Email</mat-label>
-        <input type="eamil" matInput name="str_email" id="str_email" formControlName="str_email">
-    </mat-form-field>
-    <!-- <mat-form-field class="example-full-width">
-        <mat-label>Genero</mat-label>
-        <input name="str_genero" id="str_genero" formControlName="str_genero">
-    </mat-form-field> -->
-    <input name="str_cgc" id="str_cgc" formControlName="str_cgc" mask="000.000.000-00">
-    <input name="str_tipo" id="str_tipo" formControlName="str_tipo">
-    <input name="dat_nasc" id="dat_nasc" formControlName="dat_nasc" mask="00/00/0000">
+<mat-card class="widthMat mat-elevation-z4">
+    <mat-card-title>Cadastro</mat-card-title>
+    <form [formGroup]="formUser" (ngSubmit)="salvarFormulaio()">
+        <div fxLayout="row" fxLayoutAlign="space-evenly center">
+            <mat-form-field fxFlex="30">
+                <mat-label>Nome</mat-label>
+                <input type="text" matInput placeholder="Ex. João" name="str_nome" formControlName="str_nome">
+            </mat-form-field>
+            <mat-form-field fxFlex="30">
+                <mat-label>Celular</mat-label>
+                <input name="str_celular" matInput id="str_celular" formControlName="str_celular"
+                    mask="(00) 0 0000-0000">
+            </mat-form-field>
+            <mat-form-field fxFlex="30">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput name="str_email" id="str_email" formControlName="str_email">
+            </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-evenly center">
 
-    <div formGroupName="endereco">
-        <input name="str_cep" id="str_cep" formControlName="str_cep">
-        <input name="str_logradouro" id="str_logradouro" formControlName="str_logradouro">
-        <input name="str_bairro" id="str_bairro" formControlName="str_bairro">
-        <input name="str_numero" id="str_numero" formControlName="str_numero">
-        <input name="str_cidade" id="str_cidade" formControlName="str_cidade">
-        <input name="str_estado" id="str_estado" formControlName="str_estado">
-    </div>
-</form>
+            <ng-select [items]="generoSelect" fxFlex="15" formControlName="str_genero" id="str_genero"
+                placeholder="Genero">
+            </ng-select>
+
+            <ng-select [items]="tipoSelect" fxFlex="20" formControlName="str_tipo" id="str_tipo" bindLabel="label"
+                bindValue="value" placeholder="Tipo" (change)="getTipoSelect()">
+            </ng-select>
+
+            <mat-form-field fxFlex="25">
+                <mat-label>{{configCgc.name}}</mat-label>
+                <input name="str_cgc" matInput id="str_cgc" formControlName="str_cgc" [mask]="configCgc.mask">
+            </mat-form-field>
+
+            <mat-form-field fxFlex="30">
+                <mat-label>Data de Nascimento</mat-label>
+                <input name="dat_nasc" matInput id="dat_nasc" formControlName="dat_nasc" mask="00/00/0000">
+            </mat-form-field>
+        </div>
+
+        <mat-card-subtitle>Endereço</mat-card-subtitle>
+
+        <div fxLayout="row" fxLayoutAlign="space-evenly center" formGroupName="endereco">
+            <mat-form-field fxFlex="15">
+                <mat-label>CEP</mat-label>
+                <input name="str_cep" matInput id="str_cep" formControlName="str_cep" mask="00.000-000"
+                    (change)="getCep()">
+            </mat-form-field>
+
+            <mat-form-field fxFlex="45">
+                <mat-label>Logradouro</mat-label>
+                <input name="str_logradouro" matInput id="str_logradouro" formControlName="str_logradouro">
+            </mat-form-field>
+
+            <mat-form-field fxFlex="30">
+                <mat-label>Bairro</mat-label>
+                <input name="str_bairro" matInput id="str_bairro" formControlName="str_bairro">
+            </mat-form-field>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="space-evenly center" formGroupName="endereco">
+            <mat-form-field fxFlex="15">
+                <mat-label>Número</mat-label>
+                <input name="str_numero" matInput id="str_numero" formControlName="str_numero">
+            </mat-form-field>
+
+            <mat-form-field fxFlex="15">
+                <mat-label>Complemento</mat-label>
+                <input name="str_complemento" matInput id="str_complemento" formControlName="str_complemento">
+            </mat-form-field>
+
+            <mat-form-field fxFlex="30">
+                <mat-label>Estado</mat-label>
+                <input name="str_estado" matInput id="str_estado" formControlName="str_estado">
+            </mat-form-field>
+
+            <mat-form-field fxFlex="30">
+                <mat-label>Cidade</mat-label>
+                <input name="str_cidade" matInput id="str_cidade" formControlName="str_cidade">
+            </mat-form-field>
+        </div>
+
+        <button mat-raised-button color="primary" [disabled]="formUser.invalid">Cadastrar</button>
+    </form>
+</mat-card>

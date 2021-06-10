@@ -15,6 +15,12 @@ import { ListaProjetosComponent } from './view/projeto/lista-projetos/lista-proj
 import { FormularioUserComponent } from './view/user/formulario-user/formulario-user.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatCardModule } from '@angular/material/card';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { NgxMaskModule } from 'ngx-mask';
 
 
 @NgModule({
@@ -24,7 +30,7 @@ import { MatInputModule } from '@angular/material/input';
     NavbarComponent,
     ScreenComponent,
     ListaProjetosComponent,
-    FormularioUserComponent
+    FormularioUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,13 @@ import { MatInputModule } from '@angular/material/input';
     MatButtonModule,
     MatSidenavModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    FlexLayoutModule,
+    MatCardModule,
+    NgSelectModule,
+    HttpClientModule,
+    NgxMaskModule.forRoot(),
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
