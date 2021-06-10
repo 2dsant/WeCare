@@ -74,7 +74,6 @@ export class FormularioUserComponent implements OnInit {
   }
 
   getTipoSelect() {
-    console.log(this.formUser.get('str_tipo')?.value);
 
     if (this.formUser.get('str_tipo')?.value == 'F' || this.formUser.get('str_tipo')?.value == 'B') {
       this.configCgc = { name: 'CPF', mask: '000.000.000-00' }

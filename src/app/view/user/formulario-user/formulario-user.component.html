@@ -18,8 +18,8 @@
         </div>
         <div fxLayout="row" fxLayoutAlign="space-evenly center">
 
-            <ng-select [items]="generoSelect" fxFlex="15" formControlName="str_genero" id="str_genero"
-                placeholder="Genero">
+            <ng-select [items]="generoSelect" fxFlex="15" formControlName="str_genero" id="str_genero" bindLabel="label"
+                bindValue="value" placeholder="Genero">
             </ng-select>
 
             <ng-select [items]="tipoSelect" fxFlex="20" formControlName="str_tipo" id="str_tipo" bindLabel="label"
