@@ -21,6 +21,9 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { NgxMaskModule } from 'ngx-mask';
+import { CadastroProjetoComponent } from './view/projeto/cadastro-projeto/cadastro-projeto.component';
+import { ArquivoComponent } from './view/arquivos/arquivo/arquivo.component';
+import { PostagemComponent } from './view/postagens/postagem/postagem.component';
 
 
 @NgModule({
@@ -31,6 +34,9 @@ import { NgxMaskModule } from 'ngx-mask';
     ScreenComponent,
     ListaProjetosComponent,
     FormularioUserComponent,
+    CadastroProjetoComponent,
+    ArquivoComponent,
+    PostagemComponent
   ],
   imports: [
     BrowserModule,

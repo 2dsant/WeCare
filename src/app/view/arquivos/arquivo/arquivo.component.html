@@ -1,0 +1,11 @@
+<mat-card class="widthMat mat-elevation-z4">
+    <mat-card-title>Novo Post</mat-card-title>
+    <form [formGroup]="formArquivo" (ngSubmit)="salvarFormulario()">
+        <div fxLayout="row" fxLayoutAlign="space-evenly center">
+            <mat-form-field fxFlex="90">
+                <input type="file" name="str_dir" matInput id="str_dir">
+                <input type="text" name="str_desc" matInput id="str_desc_ft" formControlName="str_desc_ft">
+            </mat-form-field>
+        </div>
+    </form>
+</mat-card>

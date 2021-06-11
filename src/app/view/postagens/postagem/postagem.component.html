@@ -1,0 +1,11 @@
+<mat-card class="widthMat mat-elevation-z4">
+    <mat-card-title>Novo Post</mat-card-title>
+    <form [formGroup]="formPostagem" (ngSubmit)="salvarFormulaio()">
+        <div fxLayout="row" fxLayoutAlign="space-evenly center">
+            <mat-form-field fxFlex="90">
+                <textarea name="str_desc" placeholder="O que deseja compartilhar?" matInput id="str_desc"
+                    formControlName="str_desc"></textarea>
+            </mat-form-field>
+        </div>
+    </form>
+</mat-card>

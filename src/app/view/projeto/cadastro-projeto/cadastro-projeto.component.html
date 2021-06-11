@@ -1,0 +1,22 @@
+<mat-card class="widthMat mat-elevation-z4">
+    <mat-card-title>Cadastro de Projeto</mat-card-title>
+    <form [formGroup]="formProject" (ngSubmit)="salvarFormulaio()">
+        <div fxLayout="row" fxLayoutAlign="space-evenly center">
+            <mat-form-field fxFlex="30">
+                <mat-label>Nome Projeto</mat-label>
+                <input type="text" matInput name="str_tituloProject" formControlName="str_tituloProject">
+            </mat-form-field>
+            <mat-form-field fxFlex="30">
+                <mat-label>Data de Início</mat-label>
+                <input name="dat_Inicio" matInput id="dat_Inicio" formControlName="dat_Inicio" mask="00/00/0000">
+            </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-evenly center">
+            <mat-form-field fxFlex="90">
+                <mat-label>Descrição</mat-label>
+                <textarea name="str_desc" matInput id="str_desc" formControlName="str_desc"></textarea>
+            </mat-form-field>
+        </div>
+        <button mat-raised-button color="primary" [disabled]="formProject.invalid">Cadastrar</button>
+    </form>
+</mat-card>

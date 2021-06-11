@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ScreenComponent } from './core/screen/screen.component';
 import { HomeComponent } from './view/home/home.component';
+import { CadastroProjetoComponent } from './view/projeto/cadastro-projeto/cadastro-projeto.component';
 import { ListaProjetosComponent } from './view/projeto/lista-projetos/lista-projetos.component';
 import { FormularioUserComponent } from './view/user/formulario-user/formulario-user.component';
 
@@ -22,6 +23,10 @@ const routes: Routes =
         {
           path: 'user/cadastro',
           component: FormularioUserComponent
+        },
+        {
+          path: 'projeto/cadastro',
+          component: CadastroProjetoComponent
         }
 
       ],
