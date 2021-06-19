@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { ProjetoService } from 'src/app/service/projeto.service';
 
 @Component({
   selector: 'app-cadastro-projeto',
@@ -10,7 +12,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 export class CadastroProjetoComponent implements OnInit {
   formProject: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private spinner: NgxSpinnerService) {
+  constructor(private formBuilder: FormBuilder, private _route: Router, private _projeto: ProjetoService) {
     this.formProject = this.formBuilder.group({
       id: [null],
       str_tituloProject: [null, [Validators.required, Validators.maxLength(100), Validators.minLength(5)]],
@@ -23,7 +25,9 @@ export class CadastroProjetoComponent implements OnInit {
   }
 
   salvarFormulaio() {
-    console.log(this.formProject);
+    this._projeto.saveProjeto(this.formProject.value).then(() => {
+      this._route.navigate(['/projeto'])
+    })
   }
 
   ngOnInit(): void {

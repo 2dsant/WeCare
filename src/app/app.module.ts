@@ -11,7 +11,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { ListaProjetosComponent } from './view/projeto/lista-projetos/lista-projetos.component';
 import { FormularioUserComponent } from './view/user/formulario-user/formulario-user.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
@@ -24,7 +23,14 @@ import { NgxMaskModule } from 'ngx-mask';
 import { CadastroProjetoComponent } from './view/projeto/cadastro-projeto/cadastro-projeto.component';
 import { ArquivoComponent } from './view/arquivos/arquivo/arquivo.component';
 import { PostagemComponent } from './view/postagens/postagem/postagem.component';
-
+import { GridUserComponent } from './view/user/grid-user/grid-user.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
+import { NotFoundComponentComponent } from './core/not-found-component/not-found-component.component';
+import { ProjetoGridComponent } from './view/projeto/projeto-grid/projeto-grid.component';
+import { FakeProjectComponent } from './view/projeto/fake-project/fake-project.component';
+import { ForumGridComponent } from './view/forum/forum-grid/forum-grid.component';
+import { LoginComponent } from './view/login/login.component';
 
 @NgModule({
   declarations: [
@@ -32,11 +38,17 @@ import { PostagemComponent } from './view/postagens/postagem/postagem.component'
     HomeComponent,
     NavbarComponent,
     ScreenComponent,
-    ListaProjetosComponent,
     FormularioUserComponent,
     CadastroProjetoComponent,
     ArquivoComponent,
-    PostagemComponent
+    PostagemComponent,
+    GridUserComponent,
+    NotFoundComponentComponent,
+    CadastroProjetoComponent,
+    ProjetoGridComponent,
+    FakeProjectComponent,
+    ForumGridComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +65,9 @@ import { PostagemComponent } from './view/postagens/postagem/postagem.component'
     NgSelectModule,
     HttpClientModule,
     NgxMaskModule.forRoot(),
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    MatTableModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

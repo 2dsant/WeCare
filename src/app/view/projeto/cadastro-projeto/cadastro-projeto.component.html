@@ -8,7 +8,7 @@
             </mat-form-field>
             <mat-form-field fxFlex="30">
                 <mat-label>Data de Início</mat-label>
-                <input name="dat_Inicio" matInput id="dat_Inicio" formControlName="dat_Inicio" mask="00/00/0000">
+                <input name="dat_inicio" matInput id="dat_inicio" formControlName="dat_inicio" mask="00/00/0000">
             </mat-form-field>
         </div>
         <div fxLayout="row" fxLayoutAlign="space-evenly center">
@@ -17,6 +17,14 @@
                 <textarea name="str_desc" matInput id="str_desc" formControlName="str_desc"></textarea>
             </mat-form-field>
         </div>
-        <button mat-raised-button color="primary" [disabled]="formProject.invalid">Cadastrar</button>
+
+        <div fxLayout="row" fxLayoutAlign="space-evenly center">
+            <input type="file" multiple>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; margin-top: 10px;">
+            <button mat-raised-button color="primary" [routerLink]="['/projeto']">Cancelar</button>
+            <button mat-raised-button color="primary" [disabled]="formProject.invalid">Cadastrar</button>
+        </div>
     </form>
 </mat-card>

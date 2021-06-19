@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   listaOfMenus = [
-    { name: 'Cadastro de Usuários', routerLink: 'user/cadastro', title: 'Cadastrar novos usuarios no sistema' },
-    { name: 'Cadastro de Projetos', routerLink: 'project/cadastro', title: 'Cadastrar novos projetos no sistema' }
+    { name: 'Gestão de Usuários', routerLink: 'user', title: 'Gerenciar os usuarios do sistema' },
+    { name: 'Gestão de Projetos', routerLink: 'projeto', title: 'Gerenciar projetos do sistema' },
+    { name: 'Gestão de Foruns', routerLink: 'forum', title: 'Gerenciar os foruns do sistema' }
   ]
 
   constructor() { }

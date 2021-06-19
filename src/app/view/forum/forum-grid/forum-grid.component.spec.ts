@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListaProjetosComponent } from './lista-projetos.component';
+import { ForumGridComponent } from './forum-grid.component';
 
-describe('ListaProjetosComponent', () => {
-  let component: ListaProjetosComponent;
-  let fixture: ComponentFixture<ListaProjetosComponent>;
+describe('ForumGridComponent', () => {
+  let component: ForumGridComponent;
+  let fixture: ComponentFixture<ForumGridComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListaProjetosComponent ]
+      declarations: [ ForumGridComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ListaProjetosComponent);
+    fixture = TestBed.createComponent(ForumGridComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

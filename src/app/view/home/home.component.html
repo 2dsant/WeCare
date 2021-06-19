@@ -1,1 +1,51 @@
-<p>home works!</p>
+<div class="animate__animated animate__fadeInDown">
+    <button mat-raised-button color="primary" class="btnProjeto" [routerLink]="['/projeto/cadastro'] ">Quero incluir meu Projeto</button>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; margin-top: 10px;">
+
+
+    <mat-card class="home-card mat-elevation-z4 animate__animated animate__fadeIn" *ngFor="let item of albumProjects" style="margin-top: 5px; margin-bottom: 5px;">
+        <mat-card-header>
+            <div mat-card-avatar class="header-image"></div>
+            <mat-card-title>{{item.author}}</mat-card-title>
+            <mat-card-subtitle>Lorem ipsum</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{item.download_url}}" alt="Foto projeto">
+        <mat-card-content>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, cupiditate! Quis omnis animi alias minima quo, voluptatem repudiandae exercitationem eius nihil odio consequatur, nesciunt consequuntur impedit tenetur. Corporis, vero expedita?
+            </p>
+            <div class="comments" *ngIf="item.showComentarios">
+                <div>
+                    <span title="marcia.filho23@hotmail.com">
+                        Márcia Filho: 
+                    </span>
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, cupiditate! Quis omnis animi alias minima quo.
+                    </span>
+                </div>
+                <div>
+                    <span title="carlos.henrique@gmail.com">
+                        Henrique Carlos:
+                    </span>
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, cupiditate! Quis omnis animi alias minima quo.
+                    </span>
+                </div>
+
+                <div>
+                    <span title="andre.silva@gmail.com">
+                        André Santos:
+                    </span>
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, cupiditate! Quis omnis animi alias minima quo.
+                    </span>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>Curtir</button>
+            <button mat-button (click)="item.showComentarios = !item.showComentarios">Comentarios</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

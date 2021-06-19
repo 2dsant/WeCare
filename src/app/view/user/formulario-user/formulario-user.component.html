@@ -79,6 +79,11 @@
             </mat-form-field>
         </div>
 
-        <button mat-raised-button color="primary" [disabled]="formUser.invalid">Cadastrar</button>
+        <div style="display: flex; justify-content: space-between; margin-top: 10px;">
+
+            <button mat-raised-button color="primary" [routerLink]="['/user']">Cancelar</button>
+            <button mat-raised-button color="primary" [disabled]="formUser.invalid">Cadastrar</button>
+            <!-- <button mat-raised-button color="primary">Cadastrar</button> -->
+        </div>
     </form>
 </mat-card>

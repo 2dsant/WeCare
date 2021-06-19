@@ -1,0 +1,117 @@
+{
+  "users": [
+    {
+      "str_nome": "TESTE",
+      "str_celular": "TESTE",
+      "str_email": "TESTE",
+      "str_genero": "TESTE",
+      "str_cgc": "TESTE",
+      "str_tipo": "TESTE",
+      "dat_nasc": "TESTE",
+      "endereco": {
+        "id": "TESTE",
+        "str_cep": "TESTE",
+        "str_logradouro": "TESTE",
+        "str_complemento": "TESTE",
+        "str_bairro": "TESTE",
+        "str_numero": "TESTE",
+        "str_cidade": "TESTE",
+        "str_estado": "TESTE",
+        "str_origem": "TESTE"
+      },
+      "id": 1
+    },
+    {
+      "str_nome": "David Santos",
+      "str_celular": "41984233005",
+      "str_email": "david@david.com",
+      "str_genero": "F",
+      "str_cgc": "00000000000000",
+      "str_tipo": "J",
+      "dat_nasc": "05052005",
+      "endereco": {
+        "id": null,
+        "str_cep": "80330200",
+        "str_logradouro": "Rua Vieira Fazenda",
+        "str_complemento": "AP",
+        "str_bairro": "Portão",
+        "str_numero": "2000",
+        "str_cidade": "Curitiba",
+        "str_estado": "PR",
+        "str_origem": null
+      },
+      "id": 2
+    },
+    {
+      "str_nome": "teste",
+      "str_celular": "00000000000",
+      "str_email": "david@david.com",
+      "str_genero": "M",
+      "str_cgc": "10000000000",
+      "str_tipo": "F",
+      "dat_nasc": "18041997",
+      "endereco": {
+        "id": null,
+        "str_cep": "80330020",
+        "str_logradouro": "Rua Capiberibe",
+        "str_complemento": "aaa",
+        "str_bairro": "Portão",
+        "str_numero": "2036",
+        "str_cidade": "Curitiba",
+        "str_estado": "PR",
+        "str_origem": null
+      },
+      "id": 3
+    },
+    {
+      "str_nome": "joao silva",
+      "str_celular": "00000000000",
+      "str_email": "joao@jogao.com",
+      "str_genero": "M",
+      "str_cgc": "00000000000",
+      "str_tipo": "J",
+      "dat_nasc": "18041997",
+      "endereco": {
+        "id": null,
+        "str_cep": "80330020",
+        "str_logradouro": "Rua Capiberibe",
+        "str_complemento": "AB",
+        "str_bairro": "Portão",
+        "str_numero": "000000",
+        "str_cidade": "Curitiba",
+        "str_estado": "PR",
+        "str_origem": null
+      },
+      "id": 4
+    }
+  ],
+  "projetos": [
+    {
+      "id": 1,
+      "str_tituloProject": "Nome do projeto",
+      "str_desc": "descricao do projeto ",
+      "id_Usuario": null,
+      "id_Ong": null,
+      "dat_inicio": "05052021",
+      "dat_final": null
+    },
+    {
+      "id": 2,
+      "str_tituloProject": "teste'''",
+      "str_desc": "asdasdasdasdasdasasdasd",
+      "id_Usuario": null,
+      "id_Ong": null,
+      "dat_inicio": "18062021",
+      "dat_final": null
+    },
+    {
+      "id": 3,
+      "str_tituloProject": "Fome zero",
+      "str_desc": "Projeto para arrecadar alimentos para pessoass em situacao de rua",
+      "id_Usuario": null,
+      "id_Ong": null,
+      "dat_inicio": "18062021",
+      "dat_final": null
+    }
+  ]
+}

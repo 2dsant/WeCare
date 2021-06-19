@@ -23,23 +23,37 @@
     cursor: pointer;
 }
 
-.logo img{
+.logo img {
     width: 40px;
     height: 40px;
     margin: 10px;
 }
-.toolbar-profile{
+
+.toolbar-profile {
     display: inline-block;
     margin-top: 10px;
-
 }
+
 .toolbar-profile-img {
     height: 48px;
     width: auto;
     border-radius: 50%;
 }
 
-.itemMenu{
+.itemMenu {
     margin: 5px 0 0 10px;
+    cursor: pointer;
+}
+
+.sidenav {}
+
+.itemSideNav {
+    height: 40px;
+    padding: 18px 0 0 10px;
+    vertical-align: middle;
+}
+
+.itemSideNav:hover {
+    background-color: #2c542c;
     cursor: pointer;
 }

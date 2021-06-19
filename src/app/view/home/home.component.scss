@@ -1,0 +1,23 @@
+.home-card {
+    max-width: 400px;
+}
+
+.header-image {
+    // background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+.comments {
+    font-size: 9px;
+}
+
+.comments span[title] {
+    font-weight: 500;
+}
+
+.btnProjeto {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 24px;
+    height: 60px;
+}

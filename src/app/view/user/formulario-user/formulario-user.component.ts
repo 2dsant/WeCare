@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { EnderecoDto } from 'src/app/models/endereco.dto';
 import { BuscaCepService } from 'src/app/service/busca-cep.service';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-formulario-user',
@@ -28,9 +30,9 @@ export class FormularioUserComponent implements OnInit {
 
   configCgc: any = { name: null, mask: null };
 
-  constructor(private formBuilder: FormBuilder, private buscaCep: BuscaCepService, private spinner: NgxSpinnerService) {
+  constructor(private formBuilder: FormBuilder, private buscaCep: BuscaCepService, private spinner: NgxSpinnerService, private userService: UserService, private _route: Router) {
     this.formUser = this.formBuilder.group({
-      id: [null],
+      // id: [2],
       str_nome: [null, [Validators.required, Validators.maxLength(100), Validators.minLength(5)]],
       str_celular: [null, [Validators.required, Validators.maxLength(16), Validators.minLength(8)]],
       str_email: [null, [Validators.required, Validators.email, Validators.maxLength(100)]],
@@ -70,7 +72,9 @@ export class FormularioUserComponent implements OnInit {
   }
 
   salvarFormulaio() {
-    console.log(this.formUser);
+    this.userService.saveUser(this.formUser.value).then(() => {
+      this._route.navigate(['/user'])
+    })
   }
 
   getTipoSelect() {

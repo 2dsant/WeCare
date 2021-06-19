@@ -3,34 +3,25 @@
         <img src="assets/img/charity.png" [routerLink]="['/home']">
     </span>
 
-    <button (click)="drawer.toggle()" mat-icon-button class="example-icon"
-        aria-label="Example icon-button with menu icon">
+    <button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
     </button>
 
-    <button mat-button class="toolbar-buttons" [routerLink]="['/']">Home</button>
-    <button mat-button class="toolbar-buttons">Projetos</button>
-    <button mat-button class="toolbar-buttons">Forum</button>
+    <button mat-button class="toolbar-buttons" [routerLink]="['/home']">Home</button>
+    <button mat-button class="toolbar-buttons" [routerLink]="['/projeto']">Projetos</button>
+    <button mat-button class="toolbar-buttons" [routerLink]="['/forum']">Forum</button>
     <!-- <span>My App</span> -->
     <span class="example-spacer"></span>
 
-    <button mat-icon-button class="example-icon favorite-icon" [routerLink]="['/projeto']">
-        <mat-icon>favorite</mat-icon>
-    </button>
-
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
-    </button>
-
     <span class="toolbar-profile">
-        <img class="toolbar-profile-img" src="assets/img/profile.jpg" [routerLink]="['/home']">
+        <img class="toolbar-profile-img" src="assets/img/profile.jpg">
     </span>
 </mat-toolbar>
 
 <mat-drawer-container class="container-sidenav">
 
     <mat-drawer #drawer class="sidenav" mode="push">
-        <div *ngFor="let item of listaOfMenus" class="itemMenu">
+        <div *ngFor="let item of listaOfMenus" class="itemSideNav">
             <span [routerLink]="[item.routerLink]" [title]="item.title">{{item.name}}</span>
         </div>
     </mat-drawer>
